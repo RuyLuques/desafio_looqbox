@@ -136,9 +136,8 @@ Para cada produto:
 ✔ Tabela Final: vendas_processadas
 
 
-📊 Tabela Final: vendas_processadas
 
-Coluna	Descrição
+📈 Coluna	Descrição
 ```text
 product_name	Nome do produto
 
