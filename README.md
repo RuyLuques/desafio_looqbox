@@ -1,4 +1,4 @@
-📊 Data Pipeline — Looqbox Challenge
+## 📊 Data Pipeline — Looqbox Challenge
 
 Pipeline ETL desenvolvido em Python para extração, transformação e carga de dados no PostgreSQL, totalmente containerizado com Docker e integrado com GitHub Actions (CI).
 
@@ -15,8 +15,6 @@ Extract (SQLAlchemy)
 Transform (Pandas)
         ↓
 Load (PostgreSQL)
-
-📂 Estrutura do Projeto
 
 ```
 
@@ -64,19 +62,12 @@ DESAFIO_SQL/
 
 ## 🐳 Execução com Docker (recomendado)
 
-
-🐳 Execução com Docker (recomendado)
 🔹 Subir containers
-docker compose up --build
-🔹 Resetar ambiente
-
-Subir containers
 ```text
 docker compose up --build
 ```
-Resetar ambiente
+🔹 Resetar ambiente
 ```text
-
 docker compose down -v
 ```
 
@@ -89,10 +80,6 @@ docker/init.sql
 ```text
 postgresql://postgres:postgres@db:5432/looqbox_challenge
 ```
-💻 Execução sem Docker
-
-1️⃣ Criar ambiente virtual
-
 
 🐳 Conexão interna Docker
 ```text
@@ -110,25 +97,16 @@ venv\Scripts\activate
 ```
 ```text
 pip install -r requirements.txt
-
-2️⃣ Criar banco manualmente
-
 ```
 
 2️⃣ Criar banco manualmente
 ```text
-
 CREATE DATABASE looqbox_challenge;
 ```
 
 Executar:
 ```text
 docker/init.sql
-
-3️⃣ Configurar .env
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
-4️⃣ Rodar pipeline
-
 ```
 
 3️⃣ Configurar .env
@@ -138,7 +116,6 @@ DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
 
 4️⃣ Rodar pipeline
 ```text
-
 python main.py
 ```
 
@@ -191,15 +168,12 @@ O projeto possui testes unitários focados na camada de transformação (transfo
 ✔ Presença da coluna is_outlier
 
 
-🔹 Executar testes
-pytest
-🔹 Exemplo de saída
 
-Executar testes
+🔹 Executar testes
 ```text
 pytest
 ```
-Exemplo de saída
+🔹 Exemplo de saída
 ```text
 
 collected 1 item
