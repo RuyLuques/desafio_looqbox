@@ -76,7 +76,7 @@ docker compose up --build
 ```
 Resetar ambiente
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 docker compose down -v
 ```
 
