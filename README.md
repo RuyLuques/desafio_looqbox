@@ -14,7 +14,7 @@ Extract (SQLAlchemy)
 Transform (Pandas)
         ↓
 Load (PostgreSQL)
-Estrutura do Projeto
+📂 Estrutura do Projeto
 DESAFIO_SQL/
 │
 ├── docker/
@@ -54,38 +54,30 @@ Pytest
 GitHub Actions
 
 🐳 Execução com Docker (recomendado)
-Subir containers
+🔹 Subir containers
 docker compose up --build
-Resetar ambiente
+🔹 Resetar ambiente
 docker compose down -v
 
 O banco é inicializado automaticamente via:
 
 docker/init.sql
-Conexão interna Docker
+🔹 Conexão interna Docker
 postgresql://postgres:postgres@db:5432/looqbox_challenge
 💻 Execução sem Docker
-
 1️⃣ Criar ambiente virtual
-
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
-
 2️⃣ Criar banco manualmente
-
 CREATE DATABASE looqbox_challenge;
 
 Executar:
 
 docker/init.sql
-
 3️⃣ Configurar .env
-
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
-
 4️⃣ Rodar pipeline
-
 python main.py
 🔄 Transformações Aplicadas
 
@@ -101,7 +93,7 @@ Identificação de outliers via desvio padrão
 
 Preservação de review_score
 
-Tabela Final: vendas_processadas
+📊 Tabela Final: vendas_processadas
 Coluna	Descrição
 product_name	Nome do produto
 category	Categoria
@@ -110,7 +102,6 @@ total_units_sold	Total vendido
 total_revenue	Receita total
 review_score	Nota média
 is_outlier	Flag de anomalia
-
 🧪 Testes
 
 O projeto possui testes unitários focados na camada de transformação (transform.py), garantindo:
@@ -121,9 +112,9 @@ Cálculo correto de total_revenue
 
 Presença da coluna is_outlier
 
-Executar testes
+🔹 Executar testes
 pytest
-Exemplo de saída
+🔹 Exemplo de saída
 collected 1 item
 
 tests/test_transform.py .                                [100%]
