@@ -15,14 +15,13 @@ Extract (SQLAlchemy)
 Transform (Pandas)
         ↓
 Load (PostgreSQL)
-<<<<<<< HEAD
+
 📂 Estrutura do Projeto
-=======
+
 ```
 
 ## 📂 Estrutura do Projeto
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 DESAFIO_SQL/
 │
 ├── docker/
@@ -65,12 +64,12 @@ DESAFIO_SQL/
 
 ## 🐳 Execução com Docker (recomendado)
 
-<<<<<<< HEAD
+
 🐳 Execução com Docker (recomendado)
 🔹 Subir containers
 docker compose up --build
 🔹 Resetar ambiente
-=======
+
 Subir containers
 ```text
 docker compose up --build
@@ -84,12 +83,12 @@ docker compose down -v
 🐳 O banco é inicializado automaticamente via:
 ```text
 docker/init.sql
-<<<<<<< HEAD
+
 🔹 Conexão interna Docker
 postgresql://postgres:postgres@db:5432/looqbox_challenge
 💻 Execução sem Docker
 1️⃣ Criar ambiente virtual
-=======
+
 ```
 
 🐳 Conexão interna Docker
@@ -101,7 +100,7 @@ postgresql://postgres:postgres@db:5432/looqbox_challenge
 
 1️⃣ Criar ambiente virtual
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 python -m venv venv
 ```
 ```text
@@ -109,25 +108,25 @@ venv\Scripts\activate
 ```
 ```text
 pip install -r requirements.txt
-<<<<<<< HEAD
+
 2️⃣ Criar banco manualmente
-=======
+
 ```
 
 2️⃣ Criar banco manualmente
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 CREATE DATABASE looqbox_challenge;
 ```
 
 Executar:
 ```text
 docker/init.sql
-<<<<<<< HEAD
+
 3️⃣ Configurar .env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
 4️⃣ Rodar pipeline
-=======
+
 ```
 
 3️⃣ Configurar .env
@@ -137,7 +136,7 @@ DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
 
 4️⃣ Rodar pipeline
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 python main.py
 ```
 
@@ -158,10 +157,8 @@ Para cada produto:
 ✔ Tabela Final: vendas_processadas
 
 
-<<<<<<< HEAD
 📊 Tabela Final: vendas_processadas
-=======
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 Coluna	Descrição
 ```text
 product_name	Nome do produto
@@ -177,14 +174,12 @@ total_revenue	Receita total
 review_score	Nota média
 
 is_outlier	Flag de anomalia
-<<<<<<< HEAD
-🧪 Testes
 
-=======
+
 ```
 
 ## 🧪 Testes
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 O projeto possui testes unitários focados na camada de transformação (transform.py), garantindo:
 
 ✔ Cálculo correto de total_units_sold
@@ -193,18 +188,18 @@ O projeto possui testes unitários focados na camada de transformação (transfo
 
 ✔ Presença da coluna is_outlier
 
-<<<<<<< HEAD
+
 🔹 Executar testes
 pytest
 🔹 Exemplo de saída
-=======
+
 Executar testes
 ```text
 pytest
 ```
 Exemplo de saída
 ```text
->>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
+
 collected 1 item
 
 tests/test_transform.py .                                [100%]
