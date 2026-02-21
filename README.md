@@ -83,13 +83,16 @@ docker compose down -v
 🐳 O banco é inicializado automaticamente via:
 ```text
 docker/init.sql
+```
 
 🔹 Conexão interna Docker
+```text
 postgresql://postgres:postgres@db:5432/looqbox_challenge
+```
 💻 Execução sem Docker
+
 1️⃣ Criar ambiente virtual
 
-```
 
 🐳 Conexão interna Docker
 ```text
@@ -100,7 +103,6 @@ postgresql://postgres:postgres@db:5432/looqbox_challenge
 
 1️⃣ Criar ambiente virtual
 ```text
-
 python -m venv venv
 ```
 ```text
