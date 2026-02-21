@@ -7,6 +7,7 @@ Pipeline ETL desenvolvido em Python para extração, transformação e carga de 
 Processar dados da tabela vendas_raw, aplicar transformações analíticas e gerar a tabela vendas_processadas com métricas agregadas e identificação de outliers.
 
 🏗️ Arquitetura
+```text
 PostgreSQL (vendas_raw)
         ↓
 Extract (SQLAlchemy)
@@ -14,7 +15,14 @@ Extract (SQLAlchemy)
 Transform (Pandas)
         ↓
 Load (PostgreSQL)
+<<<<<<< HEAD
 📂 Estrutura do Projeto
+=======
+```
+
+## 📂 Estrutura do Projeto
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 DESAFIO_SQL/
 │
 ├── docker/
@@ -37,136 +45,225 @@ DESAFIO_SQL/
 ├── requirements.txt
 ├── main.py
 └── README.md
-🛠️ Stack
+```
 
-Python 3.11+
+## 🛠️ Stack
 
-PostgreSQL 15
+✔ Python 3.11+
 
-SQLAlchemy
+✔ PostgreSQL 15
 
-Pandas
+✔ SQLAlchemy
 
-Docker
+✔ Pandas
 
-Pytest
+✔ Docker
 
-GitHub Actions
+✔ Pytest
 
+✔ GitHub Actions
+
+## 🐳 Execução com Docker (recomendado)
+
+<<<<<<< HEAD
 🐳 Execução com Docker (recomendado)
 🔹 Subir containers
 docker compose up --build
 🔹 Resetar ambiente
+=======
+Subir containers
+```text
+docker compose up --build
+```
+Resetar ambiente
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 docker compose down -v
+```
 
-O banco é inicializado automaticamente via:
-
+🐳 O banco é inicializado automaticamente via:
+```text
 docker/init.sql
+<<<<<<< HEAD
 🔹 Conexão interna Docker
 postgresql://postgres:postgres@db:5432/looqbox_challenge
 💻 Execução sem Docker
 1️⃣ Criar ambiente virtual
+=======
+```
+
+🐳 Conexão interna Docker
+```text
+postgresql://postgres:postgres@db:5432/looqbox_challenge
+```
+
+## 💻 Execução sem Docker
+
+1️⃣ Criar ambiente virtual
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 python -m venv venv
+```
+```text
 venv\Scripts\activate
+```
+```text
 pip install -r requirements.txt
+<<<<<<< HEAD
 2️⃣ Criar banco manualmente
+=======
+```
+
+2️⃣ Criar banco manualmente
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 CREATE DATABASE looqbox_challenge;
+```
 
 Executar:
-
+```text
 docker/init.sql
+<<<<<<< HEAD
 3️⃣ Configurar .env
 DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
 4️⃣ Rodar pipeline
+=======
+```
+
+3️⃣ Configurar .env
+```text
+DATABASE_URL=postgresql://postgres:postgres@localhost:5432/looqbox_challenge
+```
+
+4️⃣ Rodar pipeline
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 python main.py
-🔄 Transformações Aplicadas
+```
+
+## 🔄 Transformações Aplicadas
 
 Para cada produto:
 
-Soma das vendas dos 12 meses
+✔ Soma das vendas dos 12 meses
 
-Cálculo de total_units_sold
+✔ Cálculo de total_units_sold
 
-Cálculo de total_revenue
+✔ Cálculo de total_revenue
 
-Identificação de outliers via desvio padrão
+✔ Identificação de outliers via desvio padrão
 
-Preservação de review_score
+✔ Preservação de review_score
 
+✔ Tabela Final: vendas_processadas
+
+
+<<<<<<< HEAD
 📊 Tabela Final: vendas_processadas
+=======
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 Coluna	Descrição
+```text
 product_name	Nome do produto
+
 category	Categoria
+
 price	Preço unitário
+
 total_units_sold	Total vendido
+
 total_revenue	Receita total
+
 review_score	Nota média
+
 is_outlier	Flag de anomalia
+<<<<<<< HEAD
 🧪 Testes
 
+=======
+```
+
+## 🧪 Testes
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 O projeto possui testes unitários focados na camada de transformação (transform.py), garantindo:
 
-Cálculo correto de total_units_sold
+✔ Cálculo correto de total_units_sold
 
-Cálculo correto de total_revenue
+✔ Cálculo correto de total_revenue
 
-Presença da coluna is_outlier
+✔ Presença da coluna is_outlier
 
+<<<<<<< HEAD
 🔹 Executar testes
 pytest
 🔹 Exemplo de saída
+=======
+Executar testes
+```text
+pytest
+```
+Exemplo de saída
+```text
+>>>>>>> 24f82a8ac32e99b10881c7d0f7f3565cc2c89603
 collected 1 item
 
 tests/test_transform.py .                                [100%]
 
 1 passed in 0.75s
+```
 
 Os testes utilizam pytest e rodam de forma independente do banco de dados.
 
-🤖 CI — GitHub Actions
-
+## 🤖 CI — GitHub Actions
 Pipeline automatizado que:
 
-Instala dependências
+✔ Instala dependências
 
-Executa testes
+✔ Executa testes
 
-Valida build
+✔ Valida build
 
-Arquivo:
 
-.github/workflows/ci.yml
-📈 Exemplo de Saída
+## 📈 Exemplo de Saída
+```text
 SELECT * FROM vendas_processadas;
 product_name	total_units_sold	total_revenue
 Notebook Pro 15	255	1147500
 Wireless Mouse	...	...
-🧠 Decisões Técnicas
+```
 
-Arquitetura modular seguindo separation of concerns
+## 🧠 Decisões Técnicas
 
-Configuração via .env
+✔ Arquitetura modular seguindo separation of concerns
 
-Pipeline idempotente
+✔ Configuração via .env
 
-Logging estruturado
-
-Banco inicializado automaticamente
-
-Infra totalmente reproduzível via Docker
-
-Healthcheck no container do banco
-
-🏆 Diferenciais
-
-✔ Estrutura pronta para produção
-✔ Infra containerizada
-✔ CI automatizado
-✔ Código organizado por responsabilidade
-✔ Testes unitários
 ✔ Pipeline idempotente
 
-📌 Autor
+✔ Logging estruturado
 
+✔ Banco inicializado automaticamente
+
+✔ Infra totalmente reproduzível via Docker
+
+✔ Healthcheck no container do banco
+
+
+## 🏆 Diferenciais
+
+✔ Estrutura pronta para produção
+
+✔ Infra containerizada
+
+✔ CI automatizado
+
+✔ Código organizado por responsabilidade
+
+✔ Testes unitários
+
+✔ Pipeline idempotente
+
+
+## 📌 Autor
 Ana Ruy
 Desafio Técnico — Looqbox
